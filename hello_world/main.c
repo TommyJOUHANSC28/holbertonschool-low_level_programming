@@ -2,9 +2,10 @@
 
 /** 
  * main - Entry point
- * Return: Alvays 0 (Success)
+ * Return: Alvays  (Success)
  */
 int main(void)
-{
-	return (0);
+
+{	
+	return 0;
 }

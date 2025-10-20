@@ -1,2 +1,12 @@
-#!/bin/bash
-gcc $FILE -o a.out
+#include <stdio.h>
+
+/** 
+ * main - Entry point
+ * Return: Alvays 0 (Success)
+ */
+int main(void)
+
+{
+      puts("\"Programming is like building a multilingual puzzle");
+        return (0);
+}
