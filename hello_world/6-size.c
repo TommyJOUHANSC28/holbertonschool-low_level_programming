@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+*main - Entry point
+ *put the size "32/64"
+ *Return: Alvay 0 (Success)
+*/
 int main(void)
 	{
 	int a;
