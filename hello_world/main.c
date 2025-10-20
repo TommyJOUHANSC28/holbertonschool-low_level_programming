@@ -2,7 +2,7 @@
 
 /** 
  * main - Entry point
- * Return: Alvays  (Success)
+ * Return: Alvays 0 (Success)
  */
 int main(void)
 
