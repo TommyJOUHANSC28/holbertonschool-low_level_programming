@@ -1,21 +1,13 @@
 #include <stdio.h>
-#include <string.h>
- 
-#define  LENGTH 80
- 
+#include <unistd.h>
+/**
+*main - Entry point
+ *and that piece of art is useful" - Dora Korpar, 2015-10-19"
+ *Return: Alvay 1 (Success)
+*/
 int main(void)
 {
-   FILE *stream = stdout;
-   int i, ch;
-   char buffer[LENGTH + 1] = "and that piece of art is useful" - Dora Korpar, 2015-10-19";
- 
-   /* This could be replaced by using the fwrite function */
-   for ( i = 0;
-        (i < strlen(buffer)) && ((ch = putc(buffer[i], stream)) !=     EOF);
-         ++i);
+write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+return (1);
 }
- 
-/********************  Expected output:  **************************
- * and that piece of art is useful" - Dora Korpar, 2015-10-19
-*/
 
