@@ -6,20 +6,19 @@
 */
 int main(void)
 {
-int i, j;
-for (i = 0; i <= 9; i++)
+int a = 0, b;
+while (a <= 8)
 {
-for (j = 0; j <= 9; j++)
+b = a + 1;
+while (b <= 9)
 {
-putchar('0' + i);
-putchar('0' + j);
-if (i != 9 || j != 9)
-{
+putchar(48 + a);
+putchar(48 + b);
 putchar(',');
+putchar(' ');
+b++;
 }
+a++;
 }
-}
-putchar('\n');
 return (0);
 }
-
