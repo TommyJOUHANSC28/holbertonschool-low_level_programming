@@ -1,22 +1,27 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* main - Affiche les 50 premiers nombres de Fibonacci
+* main - Sum of the even-valued terms of fib
 *
-* Return: Always 0
+*
+* Return: 0
 */
 int main(void)
 {
-unsigned long a = 1, b = 2, next;
-int i;
-printf("%lu, %lu", a, b);
-for (i = 2; i < 50; i++)
+long int fib1, fib2, fib3, sum;
+fib1 = 0;
+fib2 = 0;
+fib3 = 1;
+sum = 0;
+while (fib2 < 4000000)
 {
-next = a + b;
-printf(", %lu", next);
-a = b;
-b = next;
+fib2 = fib1 + fib3;
+fib1 = fib3;
+fib3 = fib2;
+if (fib2 % 2 == 0)
+{
+sum += fib2;
 }
-printf("\n");
+}
+printf("%ld\n", sum);
 return (0);
 }
