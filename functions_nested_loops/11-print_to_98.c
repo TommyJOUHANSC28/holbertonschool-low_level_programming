@@ -1,31 +1,39 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* print_to_98 - Prints an integer with _putchar
-* @n: the integer to print
+* print_to_98 - prints all natural nums n to 98
+*
+* @n: int val
+*
+* Return: n to 98
 */
-void print_number(int n)
-{
-if (n < 0)
-{
-_putchar('-');
-n = -n;
-}
-if (n / 10)
-print_number(n / 10);
-_putchar((n % 10) + '0');
-}
 void print_to_98(int n)
 {
-int step = (n <= 98) ? 1 : -1;
-for (; n != 99; n += step)
+if (n <= 98)
 {
-print_number(n);
+for (; n <= 98; n++)
+{
+printf("%d", n);
 if (n != 98)
 {
-_putchar(',');
-_putchar(' ');
+printf(", ");
 }
 }
-_putchar('\n');
+printf("\n");
+}
+else if (n > 98)
+{
+for (; n >= 98; n--)
+{
+printf("%d", n);
+if (n != 98)
+{
+printf(", ");
+}
+}
+printf("\n");
+}
+else
+printf("98");
+return;
 }
