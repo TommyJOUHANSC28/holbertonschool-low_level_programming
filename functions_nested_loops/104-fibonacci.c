@@ -1,38 +1,29 @@
 #include <stdio.h>
-
 /**
- * print_first_fibonacci - Affiche le premier nombre de Fibonacci
- */
-void print_first_fibonacci(void)
-{
-	printf("Premier Fibonacci : 1\n");
-}
-
-/**
- * print_last_fibonacci - Affiche le dernier nombre de Fibonacci <= 1000
- * @a: premier terme
- * @b: deuxième terme
- */
-void print_last_fibonacci(int a, int b)
-{
-	int next;
-
-	while (b <= 1000)
-	{
-		next = a + b;
-		a = b;
-		b = next;
-	}
-	printf("Dernier Fibonacci <= 1000 : %d\n", a);
-}
-
-/**
- * main - Point d'entrée
- * Return: Always 0
- */
+* main - Print first 98 Fibonacci numbers
+*
+* Return: 0
+*/
 int main(void)
 {
-	print_first_fibonacci();
-	print_last_fibonacci(1, 2);
-	return (0);
+unsigned long a = 1, b = 2, c, a1, a2, b1, b2, c1, c2, i;
+unsigned long div = 1000000000;
+printf("%lu, %lu", a, b);
+for (i = 2; i < 91; i++)
+{
+c = a + b;
+printf(", %lu", c);
+a = b;
+b = c;
+}
+b1 = b / div, b2 = b % div, c1 = (a + b) / div, c2 = (a + b) % div;
+for (; i < 98; i++)
+{
+printf(", %lu%09lu", c1, c2);
+a1 = b1, a2 = b2, b1 = c1, b2 = c2;
+c1 = a1 + b1 + ((a2 + b2) / div);
+c2 = (a2 + b2) % div;
+}
+printf("\n");
+return (0);
 }
