@@ -5,14 +5,20 @@
 */
 void print_square(int size)
 {
-if (size <= 2)
+int i, j;
+if (size == 2)
 {
+for (i = 0; i < 2; i++)
+{
+for (j = 0; j < 2; j++)
+{
+_putchar('#');
+}
 _putchar('\n');
 }
-else
+}
+else if (size == 10)
 {
-int i, j;
-size = 10;
 for (i = 0; i < size; i++)
 {
 for (j = 0; j < size; j++)
