@@ -17,7 +17,7 @@ _putchar('#');
 _putchar('\n');
 }
 }
-else if (size == 10)
+else if (size  == 10)
 {
 for (i = 0; i < size; i++)
 {
