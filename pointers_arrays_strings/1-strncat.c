@@ -10,18 +10,18 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-int strncat = 0, i = 0;
+int srclen = 0, i = 0;
 char *temp = dest, *star = src;
 while (*src)
 {
-strncat++;
+srclen++;
 src++;
 }
 while (*dest)
 dest++;
-if (n > strncat)
+if (n > srclen)
 {
-n = strncat;
+n = srclen;
 src =  star;
 }
 for (; i < n; i++)
