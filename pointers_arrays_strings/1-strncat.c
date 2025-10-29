@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _strncat - A fontion that concatenates two strings
 * @dest: an input string
@@ -19,9 +20,13 @@ src++;
 while (*dest)
 dest++;
 if (n > srclen)
+{
 n = srclen;
 src =  star;
+}
 for (; i < n; i++)
+{
 *dest++ = '\0';
+}
 return (temp);
 }
