@@ -11,7 +11,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 int srclen = 0, i = 0;
-char *temp = dest, *star = src;
+char *temp = dest, *start = src;
 while (*src)
 {
 srclen++;
@@ -22,7 +22,7 @@ dest++;
 if (n > srclen)
 {
 n = srclen;
-src =  star;
+src =  start;
 }
 for (; i < n; i++)
 {
