@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
 * _strncat - A fontion that concatenates two strings
 * @dest: an input string
