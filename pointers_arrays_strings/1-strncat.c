@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
 * _strncat - A fontion that concatenates two strings
 * @dest: an input string
@@ -10,10 +9,28 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-int dest_len = strlen(dest);
-int i;
-for (i = 0 ; i < n && src[i] != '\0' ; i++)
-dest[dest_len + i] = src[i];
-dest[dest_len + i] = '\0';
+int len = 0, i = 0;
+char *temp = dest, *start = src;
+while (src[len])
+{
+len++;
+src++;
+}
+while (*dest)
+{
+dest++;
+n = len;
+if (n > len)
+{
+n = len;
+src = start;
+}
+}
+for (; i < n; i++)
+{
+*dest++ = *src++;
+*dest = '0';
+return (temp);
+}
 return (dest);
 }
