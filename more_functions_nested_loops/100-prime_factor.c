@@ -22,5 +22,5 @@ if (prime > 1)
 largest_prime = prime;
 }
 printf("%ld\n", largest_prime);
-return (largest_prime);
+return (0);
 }
