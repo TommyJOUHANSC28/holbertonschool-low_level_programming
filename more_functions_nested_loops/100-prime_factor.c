@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
-* main - Function to find the largest prime factor of a positive
+* maxPrimeFactors - Finds the largest prime factor of a number.
 * @n: interger number
+* Return: The largest prime factor.
 */
 long maxPrimeFactors(long n)
 {
@@ -21,6 +22,11 @@ largest_prime = n;
 }
 return (largest_prime);
 }
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
 int main(void)
 {
 long n = 1231952;
