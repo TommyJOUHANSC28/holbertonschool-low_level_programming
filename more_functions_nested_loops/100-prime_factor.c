@@ -30,16 +30,16 @@ return (largest_prime);
 int main(void)
 {
 long n = 2;
-printf("%ld, ", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 n = 2;
-printf("%ld, ", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 n = 2;
-printf("%ld, ", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 n = 2;
-printf("%ld, ", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 n = 37;
-printf("%ld, ", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 n = 612852475143;
-printf("and %ld\n", maxPrimeFactors(n));
+printf("%ld\n", maxPrimeFactors(n));
 return (0);
 }
