@@ -17,3 +17,5 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
+void generate_key(char *buf);
+#define KEY_LEN 8
