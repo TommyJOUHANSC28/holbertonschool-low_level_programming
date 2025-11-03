@@ -19,4 +19,5 @@ char *cap_string(char *);
 char *leet(char *);
 void generate_key(char *buf);
 char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
 #define KEY_LEN 8
