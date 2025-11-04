@@ -9,13 +9,16 @@
 */
 int _pow_recursion(int x, int y)
 {
-int res = 1;
-while (y > 0)
+if (y == 0)
 {
-if (y & 1)
-res = res * x;
-y = y >> 1;
-x = x * x; 
+return (1);
 }
-return (res);
+else if (y > 0)
+{
+return (x * _pow_recursion(x, y - 1));
+}
+else
+{
+return (1 / _pow_recursion(x, -y));
+}
 }
