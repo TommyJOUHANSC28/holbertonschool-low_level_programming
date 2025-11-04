@@ -2,12 +2,17 @@
 #include <stdio.h>
 /**
 * factorial - Calculates the factorial of a non-negative integer.
+*
 * @n: The integer for which to compute the factorial.
-* @return value of 'factorial'
+* Return: The factorial of the input number n.
 */
 int factorial(int n)
 {
-if (n == 1)
+if (n < 0)
+{
+return (-1);
+}
+if (n <= 1)
 {
 return (1);
 }
