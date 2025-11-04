@@ -1,11 +1,26 @@
-    Fonction SommeDiagonalePrincipale(matrice : tableau [1..N, 1..N] de Entier) : Entier
-                Variables
-                    somme : Entier
-                Début
-                    somme ← 0
-                    Pour i de 1 à N Faire
-                        somme ← somme + matrice[i, i]
-                    Fin Pour
-                    Retourner somme
-                Fin
-            Fin Fonction
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+/**
+* print_diagsums - Prints the sum of the two diagonals of a square matrix.
+* @a: Pointer to the first element of the matrix.
+* @size: The number of rows and columns in the matrix.
+*
+* This function calculates and prints the sums of the two diagonals
+* of a square matrix of integers.
+*/
+void print_diagsums(int *a, int size)
+{
+int i, j, sum1, sum2;
+sum1 = 0;
+sum2 = 0;
+for (i = 0; i < size; i++)
+{
+sum1 += a[(size + 1) * i];
+}
+for (j = 0; j < size; j++)
+{
+sum2 += a[(size - 1) * (j + 1)];
+}
+printf("%d, %d\n", sum1, sum2);
+}
