@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 int _putchar(char c);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
@@ -35,4 +38,6 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int check_palindrome(char *s, int i, int j);
-#define KEY_LEN 
+int _strlen_recursion(char *s);
+
+#endif
