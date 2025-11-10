@@ -4,12 +4,16 @@
 * _strdup -  function returns a pointer to a new string
 * which is a duplicate of the string str
 * @str: charactere
-* Return: NUll if str = NULL
+* Return: 0
 */
 char *_strdup(char *str)
 {
-int i, j;
+int i;
 char *s2;
+if (str == NULL)
+{
+return (NULL);
+}
 s2 = (char *) malloc(20);
 for (i = 0; str[i] != '\0'; i++)
 {
