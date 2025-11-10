@@ -9,12 +9,31 @@
 */
 int **alloc_grid(int width, int height)
 {
-int **grid;
-int i;
-grid = (int **)malloc(width * sizeof(int *));
-for (i = 0; i < width; i++)
+int col, row;
+int **doublePtr;
+if (width < 1 || height < 1)
 {
-grid[i] = (int *)malloc(height * sizeof(int));
+return (NULL);
 }
-return (grid);
+doublePtr = malloc(height * sizeof(int *));
+if (doublePtr == NULL)
+{
+return (NULL);
+}
+for (col = 0; col < height; col++)
+{
+doublePtr[col] = malloc(width * sizeof(int));
+if (doublePtr[col] == NULL)
+{
+for (row = 0; row < col; row++)
+free(doublePtr[row]);
+free(doublePtr);
+return (NULL);
+}
+for (row = 0; row < width; row++)
+{
+doublePtr[col][row] = 0;
+}
+}
+return (doublePtr);
 }
