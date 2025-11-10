@@ -15,5 +15,5 @@ for (i = 0; str[i] != '\0'; i++)
 {
 s2[i] = str[i];
 }
-return ((char *)s2);
+return (s2);
 }
