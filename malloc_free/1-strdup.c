@@ -8,7 +8,7 @@
 */
 char *_strdup(char *str)
 {
-int i;
+int i, j;
 char *s2;
 s2 = (char *) malloc(20);
 for (i = 0; str[i] != '\0'; i++)
