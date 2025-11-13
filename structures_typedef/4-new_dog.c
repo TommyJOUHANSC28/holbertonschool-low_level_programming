@@ -19,11 +19,13 @@ if (newDog == NULL)
 return (NULL);
 }
 while (name[length1++] || owner[length2++])
+{
 newDog->name = malloc(sizeof(newDog->name) * length1);
 if (newDog->name == NULL)
 {
 free(newDog);
 return (NULL);
+}
 }
 for (i = 0; i < length1; i++)
 {
