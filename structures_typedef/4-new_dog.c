@@ -20,6 +20,7 @@ newDog->name = malloc(sizeof(newDog->name) * length1);
 if (newDog->name == NULL)
 {
 free(newDog);
+exit(EXIT_FAILURE);
 }
 for (i = 0; i < length1; i++)
 {
@@ -31,6 +32,7 @@ if (newDog->owner == NULL)
 {
 free(newDog->name);
 free(newDog);
+exit(EXIT_FAILURE);
 }
 for (j = 0; j < length2; j++)
 newDog->owner[j] = owner[j];
