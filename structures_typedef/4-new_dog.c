@@ -15,7 +15,7 @@ if (!newDog)
 {
 return (NULL);
 }
-while (name[length1]) 
+while (name[length1])
 length1++;
 while (owner[length2])
 length2++;
