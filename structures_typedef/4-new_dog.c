@@ -18,10 +18,8 @@ if (newDog == NULL)
 {
 return (NULL);
 }
-while (name[length1++] && owner[length2++])
-{
+while (name[length1++] || owner[length2++])
 newDog->name = malloc(sizeof(newDog->name) * length1);
-}
 if (newDog->name == NULL)
 {
 free(newDog);
@@ -40,8 +38,6 @@ free(newDog);
 return (NULL);
 }
 for (j = 0; j < length2; j++)
-{
 newDog->owner[j] = owner[j];
-}
 return (newDog);
 }
