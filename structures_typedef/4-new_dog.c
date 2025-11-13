@@ -15,7 +15,10 @@ if (!newDog)
 {
 return (NULL);
 }
-while (name[length1++] ||  owner[length2++])
+while (name[length1]) 
+length1++;
+while (owner[length2])
+length2++;
 newDog->name = malloc(sizeof(newDog->name) * length1);
 if (newDog->name == NULL)
 {
