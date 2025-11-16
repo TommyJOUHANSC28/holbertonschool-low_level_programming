@@ -9,13 +9,13 @@
 char **strtow(char *str)
 {
 char **array;
-int i = 0, j, m, k = 0, len = 0, count = 0;
+int i, j, m, k = 0, len = 0, count = 0;
 if (str == NULL || *str == '\0')
 return (NULL);
-for (; str[i]; i++)
+for (i = 0; str[i]; i++)
 {
-if ((str[i] != ' ' || *str != '\t') &&
-((str[i + 1] == ' ' || str[i + 1] == '\t') || str[i + 1] == '\n'))
+if ((str[i] != ' ' && str[i] != '\t') &&
+(str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0'))
 count++;
 }
 if (count == 0)
@@ -25,11 +25,11 @@ if (array == NULL)
 return (NULL);
 for (i = 0; str[i] != '\0' && k < count; i++)
 {
-if (str[i] != ' ' || str[i] != '\t')
+if (str[i] != ' ' && str[i] != '\t')
 {
 len = 0;
 j = i;
-while ((str[j] != ' ' || str[j] != '\t') && str[j] != '\0')
+while (str[j] != ' ' && str[j] != '\t' && str[j] != '\0')
 j++, len++;
 array[k] = malloc((len + 1) * sizeof(char));
 if (array[k] == NULL)
