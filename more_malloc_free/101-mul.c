@@ -8,10 +8,10 @@
 * @b: second integer
 * Return: pointer to result (int), or NULL if malloc fails
 */
-void *mult_alloc(double a, double b)
+void *mult_alloc(long long a, long long b)
 {
-double *res;
-res = malloc(sizeof(double));
+long long *res;
+res = malloc(sizeof(long long));
 if (res == NULL)
 return (NULL);
 *res = a * b;
@@ -25,8 +25,7 @@ return (res);
 */
 int main(int argc, char **argv)
 {
-double *p;
-double a, b;
+long long *p, a, b;
 if (argc != 3)
 {
 printf("Error\n");
@@ -40,7 +39,7 @@ if (p == NULL)
 printf("Error\n");
 exit(98);
 }
-printf("%f\n", *p);
+printf("%lld\n", *p);
 free(p);
 return (0);
 }
