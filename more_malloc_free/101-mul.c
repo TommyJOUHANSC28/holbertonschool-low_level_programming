@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 /**
@@ -25,18 +26,22 @@ return (res);
 int main(int argc, char **argv)
 {
 long int *p;
+
 if (argc != 3)
 {
-fprintf(stderr, "Error: Usage %s num 1 num 2\n", argv[0]);
+printf("Error\n");
 exit(98);
 }
 p = mult_alloc(atoi(argv[1]), atoi(argv[2]));
 if (p == NULL)
 {
-fprintf(stderr, "Error: malloc failed\n");
+printf("Error\n");
 exit(98);
 }
+else
+{
 printf("%ld\n", *p);
 free(p);
 return (0);
+}
 }
