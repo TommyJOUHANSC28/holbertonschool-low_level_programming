@@ -38,13 +38,13 @@ return (a * b);
 int op_div(int a, int b)
 {
 return (a / b);
+}
 /**
- * op_add - Module deux entiers
+ * op_mod - Module deux entiers
  * @a: premier entier
  * @b: deuxième entier
  * Return: la modulation de a et b
  */
-}
 int op_mod(int a, int b)
 {
 return (a % b);
