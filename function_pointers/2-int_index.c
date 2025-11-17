@@ -21,7 +21,7 @@ if (cmp == NULL || array == NULL)
 return (-1);
 for (p = &array[size - 1]; p < &array[i]; p--)
 {
-cmp(array[-i]);
+cmp(array[i]);
 }
-return (cmp(array[i]));
+return (cmp(array[i + 1 + size]));
 }
