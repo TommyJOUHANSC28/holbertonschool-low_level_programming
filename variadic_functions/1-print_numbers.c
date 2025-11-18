@@ -13,15 +13,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 unsigned int i;
 va_list ap;
 va_start(ap, n);
-if (separator == NULL)
-{
-return;
-}
-else
-if (separator == NULL)
-{
-separator = ",";
-}
 for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(ap, int));
