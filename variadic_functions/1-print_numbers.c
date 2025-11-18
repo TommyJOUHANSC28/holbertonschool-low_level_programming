@@ -15,6 +15,11 @@ va_list ap;
 va_start(ap, n);
 if (separator == NULL)
 {
+return;
+}
+else
+if (separator == NULL)
+{
 separator = ",";
 }
 for (i = 0; i < n; i++)
