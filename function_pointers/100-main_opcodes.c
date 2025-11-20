@@ -25,7 +25,7 @@ exit(2);
 }
 while (i < atoi(argv[1]))
 {
-printf("%02x", *((unsigned char *)main + i));
+printf("%x", *((unsigned char *)main + i));
 i++;
 if (i < atoi(argv[1]))
 putchar(' ');
