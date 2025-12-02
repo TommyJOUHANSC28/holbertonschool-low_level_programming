@@ -8,15 +8,18 @@
 size_t dlistint_len(const dlistint_t *h)
 {
 
-size_t nodeCount = 0;
-if (h != NULL)
+unsigned int nodeCount = 0;
+const dlistint_t *lister;
+lister = h;
+lister = malloc(sizeof(dlistint_t));
+if (lister == NULL)
 {
-return (-1);
+return (0);
 }
-else
+while (lister)
 {
+lister = lister->next;
 nodeCount++;
-h = h->next;
 }
 return (nodeCount);
 }
