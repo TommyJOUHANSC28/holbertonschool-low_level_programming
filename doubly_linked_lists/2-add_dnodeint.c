@@ -17,7 +17,7 @@ else
 {
 new->n = n;
 new->next = *head;
-*head = new;
+new = *head;
 }
 return (*head);
 }
