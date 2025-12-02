@@ -6,10 +6,12 @@
 */
 void free_list(list_t *head)
 {
-list_t *temp;
-while ((temp = head) != NULL)
+list_t *tempo;
+while (head != NULL)
 {
-head = head->next;
-free(temp);
+tempo = head->next;
+free(head->str);
+free(head);
+head = tempo;
 }
 }
