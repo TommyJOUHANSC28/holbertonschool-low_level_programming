@@ -8,22 +8,23 @@
 */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-dlistint_t *new, *tempo;
-new = malloc(sizeof(dlistint_t));
-if (!new)
+dlistint_t *newlist = NULL, *theend = *head;
+newlist = malloc(sizeof(dlistint_t));
+if (newlist == NULL)
 return (NULL);
-new->n = n;
-new->next = NULL;
+newlist->n = n;
+newlist->prev = NULL;
+newlist->next = NULL;
 if (*head == NULL)
 {
-new->prev = NULL;
-*head = new;
-return (new);
+*head = newlist;
+return (*head);
 }
-tempo = *head;
-while (tempo->next)
-tempo = tempo->next;
-tempo->next = new;
-new->prev = tempo;
-return (new);
+while (theend->next != NULL)
+{
+theend = theend->next;
+}
+newlist->prev = theend;
+theend->next = newlist;
+return (newlist);
 }
