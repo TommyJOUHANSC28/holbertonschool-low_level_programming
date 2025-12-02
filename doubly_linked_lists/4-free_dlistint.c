@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
 * free_dlistint - a  a function that frees a dlistint_t list
 * @head: pointer of struct dlistint_t
