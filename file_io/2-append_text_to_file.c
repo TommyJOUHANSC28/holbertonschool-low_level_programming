@@ -16,7 +16,7 @@ if (fdOpen == -1)
 return (-1);
 }
 if (text_content == NULL)
-return (-1);
+text_content = "";
 while (text_content[lenght] != '\0')
 {
 lenght++;
