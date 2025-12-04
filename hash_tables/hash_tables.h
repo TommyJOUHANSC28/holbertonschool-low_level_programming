@@ -33,19 +33,7 @@ typedef struct hash_table_s
 unsigned long int size;
 hash_node_t **array;
 } hash_table_t;
-/**
-* hash_table_create - a function that creates a hash table
-* @size: is the size of the array
-* Return: A pointer to the newly created hash tableWhat makes a good hash function
-*/
 hash_table_t *hash_table_create(unsigned long int size);
-/**
-* hash_tables - A function implementing the djb2 algorithm
-*
-* @str: constant unsigned string
-*
-* Return: value of hash
-*/
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
