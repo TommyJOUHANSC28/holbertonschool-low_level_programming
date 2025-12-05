@@ -14,7 +14,7 @@ dlistint_t *current;
 unsigned int count = 0;
 if (h == NULL || newnode == NULL)
 {
-return (NULL);
+return (add_dnodeint_end(h, n));
 }
 newnode->n = n;
 newnode->next = NULL;
