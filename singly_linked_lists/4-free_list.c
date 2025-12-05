@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
-* free_listint - a function that frees a list_t list,
+* free_list - a function that frees a list_t list,
 * @head: pointer to the first node of the list
-* Return: no return
+* Return: value of free list
 */
 void free_list(list_t *head)
 {
