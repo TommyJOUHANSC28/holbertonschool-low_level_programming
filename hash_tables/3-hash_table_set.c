@@ -1,5 +1,11 @@
 #include "hash_tables.h"
-
+/**
+* hash_table_set - Function that adds an element to the hash table.
+* @ht: pointee hash table
+* @key: string the key
+* @value: the value associated with the key
+* Return: 1 if it succeeded or 0 otherwise
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int index;
@@ -14,7 +20,7 @@ if (strcmp(tmp->key, key) == 0)
 {
 free(tmp->value);
 tmp->value = strdup(value);
-return tmp->value != NULL;
+return (tmp->value != NULL);
 }
 tmp = tmp->next;
 }
@@ -28,9 +34,9 @@ if (node->key == NULL || node->value == NULL)
 free(node->key);
 free(node->value);
 free(node);
-return 0;
+return (0);
 }
 node->next = ht->array[index];
 ht->array[index] = node;
-return 1;
+return (1);
 }
