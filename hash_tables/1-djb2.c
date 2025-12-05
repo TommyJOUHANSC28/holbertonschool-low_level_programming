@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
-* hash_tables - A function implementing the djb2 algorithm
+* hash_djb2 - A function implementing the djb2 algorithm
 *
 * @str: constant unsigned string
 *
